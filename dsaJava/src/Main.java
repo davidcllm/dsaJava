@@ -14,5 +14,9 @@ public class Main {
         stack.push("FFVII");
 
         //System.out.println(stack.empty());
+        System.out.println(stack);
+
+        stack.pop();
+        System.out.println(stack);
     }
 }
