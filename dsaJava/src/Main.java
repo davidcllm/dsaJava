@@ -16,7 +16,7 @@ public class Main {
         //System.out.println(stack.empty());
         System.out.println(stack);
 
-        stack.pop();
-        System.out.println(stack);
+        String myFavGame = stack.pop();
+        System.out.println(myFavGame);
     }
 }
