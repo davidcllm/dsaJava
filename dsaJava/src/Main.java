@@ -16,7 +16,10 @@ public class Main {
         //System.out.println(stack.empty());
         System.out.println(stack);
 
-        String myFavGame = stack.pop();
-        System.out.println(myFavGame);
+        /*String myFavGame = stack.pop();
+        System.out.println(myFavGame);*/
+
+        System.out.println(stack.peek());
+        System.out.println(stack.search("DOOM"));
     }
 }
