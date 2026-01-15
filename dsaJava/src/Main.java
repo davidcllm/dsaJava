@@ -12,5 +12,12 @@ public class Main {
         queue.offer("Chad");
         queue.offer("Steve");
         queue.offer("Harold");
+
+        //System.out.println(queue);
+
+        //System.out.println(queue.peek());
+
+        queue.poll();
+        System.out.println(queue);
     }
 }
