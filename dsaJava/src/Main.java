@@ -7,5 +7,10 @@ public class Main {
         //queue: FIFO structure
 
         Queue<String> queue = new LinkedList<String>();
+
+        queue.offer("Karen");
+        queue.offer("Chad");
+        queue.offer("Steve");
+        queue.offer("Harold");
     }
 }
