@@ -12,6 +12,7 @@ public class Main {
         queue.offer(4.0);
         queue.offer(1.5);
         queue.offer(2.0);
+        queue.offer(1.0);
 
         while (!queue.isEmpty()) {
             System.out.println(queue.poll());
