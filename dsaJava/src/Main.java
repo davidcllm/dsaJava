@@ -36,5 +36,9 @@ public class Main {
 
         System.out.println(linkedList.peekFirst());
         System.out.println(linkedList.peekLast());
+
+        linkedList.addFirst("0");
+        linkedList.addLast("Z");
+        System.out.println(linkedList);
     }
 }
