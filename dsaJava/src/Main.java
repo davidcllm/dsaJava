@@ -40,5 +40,8 @@ public class Main {
         linkedList.addFirst("0");
         linkedList.addLast("Z");
         System.out.println(linkedList);
+
+        String first = linkedList.removeFirst();
+        String last = linkedList.removeLast();
     }
 }
