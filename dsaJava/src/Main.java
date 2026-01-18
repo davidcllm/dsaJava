@@ -29,8 +29,9 @@ public class Main {
         linkedList.add(4, "E");
         System.out.println(linkedList);
 
+        System.out.println(linkedList.indexOf("E"));
+
         linkedList.remove("E");
         System.out.println(linkedList);
-
     }
 }
