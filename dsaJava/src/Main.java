@@ -2,21 +2,14 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //Priority queue: FIFO structure,
-        // serves the elements with higher priority first
+        //Linked List
 
-        Queue<Double> queue = new PriorityQueue<>(Collections.reverseOrder());
-
-        queue.offer(3.0);
-        queue.offer(2.5);
-        queue.offer(4.0);
-        queue.offer(1.5);
-        queue.offer(2.0);
-        queue.offer(1.0);
-
-        while (!queue.isEmpty()) {
-            System.out.println(queue.poll());
-        }
+        LinkedList<String> linkedList = new LinkedList<String>();
+        linkedList.push("A");
+        linkedList.push("B");
+        linkedList.push("C");
+        linkedList.push("D");
+        linkedList.push("F");
 
     }
 }
