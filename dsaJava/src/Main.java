@@ -2,7 +2,9 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //Linked List: good with insertion and deletion of nodes.
+        //Linked List: good with insertion and deletion of nodes O1.
+        // stores nodes in 2 parts (data + address)
+        // there are two types singly and doubly linked lists
 
         LinkedList<String> linkedList = new LinkedList<String>();
 
