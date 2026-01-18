@@ -33,5 +33,8 @@ public class Main {
 
         linkedList.remove("E");
         System.out.println(linkedList);
+
+        System.out.println(linkedList.peekFirst());
+        System.out.println(linkedList.peekLast());
     }
 }
