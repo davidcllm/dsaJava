@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //Linked List
+        //Linked List: good with insertion and deletion of nodes.
 
         LinkedList<String> linkedList = new LinkedList<String>();
 
@@ -24,8 +24,12 @@ public class Main {
         linkedList.offer("C");
         linkedList.offer("D");
         linkedList.offer("F");
-        linkedList.poll();
+        //linkedList.poll();
 
+        linkedList.add(4, "E");
+        System.out.println(linkedList);
+
+        linkedList.remove("E");
         System.out.println(linkedList);
 
     }
