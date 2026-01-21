@@ -11,6 +11,7 @@ public class Main {
         dynamicArray.add("C");
 
         dynamicArray.insert(1,"X");
+        dynamicArray.delete("A");
 
         System.out.println(dynamicArray);
         System.out.println("size: " + dynamicArray.size);
@@ -49,7 +50,20 @@ class DynamicArray {
         size++;
     }
     public void delete(Object data) {
+        for (int i = 0; i < size; i++) {
+            if (array[i] == data) {
+                for (int j = 0; j < (size - i - 1); j++) {
+                    array[i+j] = array[i+j+1]; // Move the elements to the left
+                }
+                array[size-1] = null;
+                size--;
 
+                if (size <= (int) (capacity/3)) {
+                    shrink();
+                }
+                break;
+            }
+        }
     }
     public int search(Object data) {
         return -1;
