@@ -10,8 +10,14 @@ public class Main {
         dynamicArray.add("B");
         dynamicArray.add("C");
 
+        System.out.println(dynamicArray.search("A"));
+        System.out.println(dynamicArray.search("X"));
+
         dynamicArray.insert(1,"X");
         dynamicArray.delete("A");
+
+        System.out.println(dynamicArray.search("A"));
+        System.out.println(dynamicArray.search("X"));
 
         System.out.println(dynamicArray);
         System.out.println("size: " + dynamicArray.size);
@@ -66,6 +72,11 @@ class DynamicArray {
         }
     }
     public int search(Object data) {
+        for (int i = 0; i < size; i++) {
+            if (array[i] == data) {
+                return i;
+            }
+        }
         return -1;
     }
     private void grow() {
