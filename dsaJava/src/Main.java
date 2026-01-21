@@ -10,6 +10,8 @@ public class Main {
         dynamicArray.add("B");
         dynamicArray.add("C");
 
+        dynamicArray.insert(1,"X");
+
         System.out.println(dynamicArray);
         System.out.println("size: " + dynamicArray.size);
         System.out.println("capacity: " + dynamicArray.capacity);
@@ -37,7 +39,14 @@ class DynamicArray {
         size++;
     }
     public void insert(int index, Object data) {
-
+        if (size >= capacity) {
+            grow();
+        }
+        for (int i = size; i > index; i--) {
+            array[i] = array[i-1]; // Moves the elements to the right to make room for the insertion
+        }
+        array[index] = data;
+        size++;
     }
     public void delete(Object data) {
 
