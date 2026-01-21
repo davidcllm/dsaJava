@@ -4,20 +4,18 @@ public class Main {
     public static void main(String[] args) {
         //Dynamic Arrays
 
-        DynamicArray dynamicArray = new DynamicArray();
+        DynamicArray dynamicArray = new DynamicArray(5);
 
         dynamicArray.add("A");
         dynamicArray.add("B");
         dynamicArray.add("C");
+        dynamicArray.add("D");
+        dynamicArray.add("E");
+        dynamicArray.add("F");
 
-        System.out.println(dynamicArray.search("A"));
-        System.out.println(dynamicArray.search("X"));
-
-        dynamicArray.insert(1,"X");
         dynamicArray.delete("A");
-
-        System.out.println(dynamicArray.search("A"));
-        System.out.println(dynamicArray.search("X"));
+        dynamicArray.delete("B");
+        dynamicArray.delete("C");
 
         System.out.println(dynamicArray);
         System.out.println("size: " + dynamicArray.size);
@@ -80,10 +78,24 @@ class DynamicArray {
         return -1;
     }
     private void grow() {
+        int newCapacity = (int)(capacity * 2);
+        Object[] newArray = new Object[newCapacity];
 
+        for (int i = 0; i < size; i++) {
+            newArray[i] = array[i];
+        }
+        capacity = newCapacity;
+        array = newArray;
     }
     private void shrink() {
+        int newCapacity = (int)(capacity / 2);
+        Object[] newArray = new Object[newCapacity];
 
+        for (int i = 0; i < size; i++) {
+            newArray[i] = array[i];
+        }
+        capacity = newCapacity;
+        array = newArray;
     }
     public boolean isEmpty() {
         return size == 0;
