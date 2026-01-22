@@ -11,6 +11,9 @@ public class Main {
         long endTime;
         long elapsedTime;
 
-        
+        for (int i = 0; i < 1000000; i++) {
+            linkedList.add(i);
+            arrayList.add(i);
+        }
     }
 }
