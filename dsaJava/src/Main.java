@@ -15,5 +15,13 @@ public class Main {
             linkedList.add(i);
             arrayList.add(i);
         }
+
+        // LinkedList
+        startTime = System.nanoTime();
+        //do something
+        endTime = System.nanoTime();
+
+        elapsedTime = endTime - startTime;
+        System.out.println("LinkedList: " + elapsedTime + " ns");
     }
 }
