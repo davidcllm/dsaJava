@@ -11,6 +11,8 @@ public class Main {
         long endTime;
         long elapsedTime;
 
+
+        //Insert a lot of elements 
         for (int i = 0; i < 1000000; i++) {
             linkedList.add(i);
             arrayList.add(i);
@@ -21,6 +23,7 @@ public class Main {
         //do something
         endTime = System.nanoTime();
 
+        //Calculate elapsed time
         elapsedTime = endTime - startTime;
         System.out.println("LinkedList: " + elapsedTime + " ns");
     }
