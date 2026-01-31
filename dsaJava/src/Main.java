@@ -12,19 +12,32 @@ public class Main {
         long elapsedTime;
 
 
-        //Insert a lot of elements 
+        //Insert a lot of elements
         for (int i = 0; i < 1000000; i++) {
             linkedList.add(i);
             arrayList.add(i);
         }
 
-        // LinkedList
+        // ------LinkedList
         startTime = System.nanoTime();
-        //do something
+
+        linkedList.get(0);
+
         endTime = System.nanoTime();
 
         //Calculate elapsed time
         elapsedTime = endTime - startTime;
         System.out.println("LinkedList: " + elapsedTime + " ns");
+
+        // ------Array List
+        startTime = System.nanoTime();
+
+        arrayList.get(0);
+
+        endTime = System.nanoTime();
+
+        //Calculate elapsed time
+        elapsedTime = endTime - startTime;
+        System.out.println("ArrayList: " + elapsedTime + " ns");
     }
 }
