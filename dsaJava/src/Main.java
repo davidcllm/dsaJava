@@ -22,7 +22,7 @@ public class Main {
         startTime = System.nanoTime();
 
         //linkedList.get(0);
-        linkedList.get(500000);
+        linkedList.get(999999);
 
         endTime = System.nanoTime();
 
@@ -34,7 +34,7 @@ public class Main {
         startTime = System.nanoTime();
 
         //arrayList.get(0);
-        arrayList.get(500000);
+        arrayList.get(999999);
 
         endTime = System.nanoTime();
 
