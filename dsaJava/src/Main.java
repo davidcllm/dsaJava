@@ -23,7 +23,7 @@ public class Main {
 
         //linkedList.get(0);
         //linkedList.get(999999);
-        linkedList.remove(0);
+        linkedList.remove(500000);
 
         endTime = System.nanoTime();
 
@@ -36,7 +36,7 @@ public class Main {
 
         //arrayList.get(0);
         //arrayList.get(999999);
-        arrayList.remove(0);
+        arrayList.remove(500000);
 
         endTime = System.nanoTime();
 
