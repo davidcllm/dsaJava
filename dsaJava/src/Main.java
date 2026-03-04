@@ -2,46 +2,20 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        // LinkedList vs ArrayList
-
-        LinkedList<Integer> linkedList = new LinkedList<Integer>();
-        ArrayList<Integer> arrayList = new ArrayList<Integer>();
-
-        long startTime;
-        long endTime;
-        long elapsedTime;
-
-
-        //Insert a lot of elements
-        for (int i = 0; i < 1000000; i++) {
-            linkedList.add(i);
-            arrayList.add(i);
+        // Big O notation
+    }
+    // O(n)
+    int addUp(int n) {
+        int sum = 0;
+        for(int i = 0; i <= n; i++) {
+            sum += i;
         }
+        return sum;
+    }
 
-        // ------LinkedList
-        startTime = System.nanoTime();
-
-        //linkedList.get(0);
-        //linkedList.get(999999);
-        linkedList.remove(50);
-
-        endTime = System.nanoTime();
-
-        //Calculate elapsed time
-        elapsedTime = endTime - startTime;
-        System.out.println("LinkedList: " + elapsedTime + " ns");
-
-        // ------Array List
-        startTime = System.nanoTime();
-
-        //arrayList.get(0);
-        //arrayList.get(999999);
-        arrayList.remove(50);
-
-        endTime = System.nanoTime();
-
-        //Calculate elapsed time
-        elapsedTime = endTime - startTime;
-        System.out.println("ArrayList: " + elapsedTime + " ns");
+    // Mismo resultado, pero O(1)
+    int add(int n) {
+        int sum = n*(n+1)/2;
+        return sum;
     }
 }
