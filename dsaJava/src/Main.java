@@ -2,20 +2,26 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        // Big O notation
-    }
-    // O(n)
-    int addUp(int n) {
-        int sum = 0;
-        for(int i = 0; i <= n; i++) {
-            sum += i;
+        //linear search: iterate over a collection one element at a time
+        //runtime complexity: O(n)
+
+        int[] array = {9, 1, 5, 7, 2, 8, 3, 0, 6};
+        int index = linearSearch(array, 4);
+
+        if (index != -1) {
+            System.out.println("Element found index: " + index);
         }
-        return sum;
+        else {
+            System.out.println("Element not found");
+        }
     }
 
-    // Mismo resultado, pero O(1)
-    int add(int n) {
-        int sum = n*(n+1)/2;
-        return sum;
+    private static int linearSearch(int[] array, int value) {
+        for(int i = 0; i < array.length; i++) {
+            if (array[i] == value) {
+                return i;
+            }
+        }
+        return -1;
     }
 }
