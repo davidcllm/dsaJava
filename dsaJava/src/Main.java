@@ -5,6 +5,8 @@ public class Main {
         //linear search: iterate over a collection one element at a time
         //runtime complexity: O(n)
 
+        //efficient with small to medium datasets
+
         int[] array = {9, 1, 5, 7, 2, 8, 3, 0, 6};
         int index = linearSearch(array, 4);
 
