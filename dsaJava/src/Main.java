@@ -2,28 +2,24 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //linear search: iterate over a collection one element at a time
-        //runtime complexity: O(n)
+        //binary search: half of the array is eliminated in each step
+        //efficient with large datasets O(log n)
 
-        //efficient with small to medium datasets
+        int array[] = new int[100];
+        int target = 42;
 
-        int[] array = {9, 1, 5, 7, 2, 8, 3, 0, 6};
-        int index = linearSearch(array, 4);
+        for(int i = 0; i < array.length; i++) {
+            array[i] = i;
+        }
 
-        if (index != -1) {
-            System.out.println("Element found index: " + index);
+        int index = Arrays.binarySearch(array, target);
+
+        if (index == -1) {
+            System.out.println(target + " not found");
         }
         else {
-            System.out.println("Element not found");
+            System.out.println("Element found at: " + index);
         }
-    }
 
-    private static int linearSearch(int[] array, int value) {
-        for(int i = 0; i < array.length; i++) {
-            if (array[i] == value) {
-                return i;
-            }
-        }
-        return -1;
     }
 }
