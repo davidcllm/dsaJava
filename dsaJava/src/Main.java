@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         //binary search: half of the array is eliminated in each step
         //efficient with large datasets O(log n)
+        // has to be used with a sorted array
 
         int array[] = new int[1000000];
         int target = 77777;
