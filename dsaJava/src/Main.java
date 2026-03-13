@@ -2,45 +2,29 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //binary search: half of the array is eliminated in each step
-        //efficient with large datasets O(log n)
-        // has to be used with a sorted array
+        //interpolation search: improvement over binary s used for uniformly
+        //distributed data, "guesses".
 
-        int array[] = new int[1000000];
-        int target = 77777;
+        //average case: O(log(log(n)))
+        //worst case: O(n) [values increase exponentially]
 
-        for(int i = 0; i < array.length; i++) {
-            array[i] = i;
-        }
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int index = interpolationSearch(array, 8);
 
-         //int index = Arrays.binarySearch(array, target);
-        int index = binarySearch(array, target);
 
-        if (index == -1) {
-            System.out.println(target + " not found");
-        }
-        else {
-            System.out.println("Element found at: " + index);
-        }
 
     }
 
-    private static int binarySearch(int[] array, int target) {
-        int low = 0;
+    private static int interpolationSearch(int[] array, int value) {
         int high = array.length - 1;
+        int low = 0;
 
-        while (low <= high) {
-            int middle = low + (high - low) / 2;
-            int value = array[middle];
+        while (value >= array[low] && value <= array[high] && low <= high) {
 
-            //Optional to count the steps to found the element
-            System.out.println("middle: " + value);
-
-            if (value < target) low = middle + 1;
-            else if (value > target) high = middle - 1;
-            else return middle; // target found
         }
 
-        return -1; // target not found
+
+        return 0;
     }
+
 }
