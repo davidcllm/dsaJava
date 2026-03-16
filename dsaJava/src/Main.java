@@ -20,7 +20,7 @@ public class Main {
         int low = 0;
 
         while (value >= array[low] && value <= array[high] && low <= high) {
-
+            int probe = low + (high - low) * (value - array[low]) / (array[high] - array[low]);
         }
 
 
