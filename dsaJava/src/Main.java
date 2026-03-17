@@ -8,8 +8,8 @@ public class Main {
         //average case: O(log(log(n)))
         //worst case: O(n) [values increase exponentially]
 
-        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int index = interpolationSearch(array, 8);
+        int[] array = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024};
+        int index = interpolationSearch(array, 256);
 
         if (index != -1) {
             System.out.println("Element found at: " + index);
