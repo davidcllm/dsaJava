@@ -2,47 +2,32 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //interpolation search: improvement over binary s used for uniformly
-        //distributed data, "guesses".
+        //bubble sort: adjacent pairs are compared, swapped if they are not in order.
+        //complexity: O(n^2)
+        //small data set: okay-ish
+        //large data set: bad
 
-        //average case: O(log(log(n)))
-        //worst case: O(n) [values increase exponentially]
+        int array[] = {9, 1, 8, 2, 7, 3, 6, 4, 5};
 
-        int[] array = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024};
-        int index = interpolationSearch(array, 256);
+        bubbleSort(array);
 
-        if (index != -1) {
-            System.out.println("Element found at: " + index);
-        }
-        else {
-            System.out.println("Element not found");
+        for (int i : array) {
+            System.out.print(i);
         }
 
 
     }
 
-    private static int interpolationSearch(int[] array, int value) {
-        int high = array.length - 1;
-        int low = 0;
-
-        while (value >= array[low] && value <= array[high] && low <= high) {
-            int probe = low + (high - low) * (value - array[low]) / (array[high] - array[low]);
-
-            System.out.println("Probe: " + probe);
-
-            if (array[probe] == value) {
-                return probe;
-            }
-            else if (array[probe] < value) {
-                low = probe + 1;
-            }
-            else {
-                high = probe - 1;
+    private static void bubbleSort(int array[]) {
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; i < array.length - i - 1; j++) {
+                if (array[j] < array[j+1]) {
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                }
             }
         }
-
-
-        return -1;
     }
 
 }
