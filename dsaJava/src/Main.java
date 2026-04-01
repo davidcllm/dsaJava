@@ -21,7 +21,7 @@ public class Main {
             int min = i;
 
             for (int j = i + 1; j < array.length - 1; j++) {
-                if (array[min] > array[j]) {
+                if (array[min] < array[j]) {
                     min = j;
                 }
             }
