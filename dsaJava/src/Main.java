@@ -2,34 +2,24 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //insertion sort: after comparing elements to the left
-        //shift elements to the right to make room to insert a value
+        //recursion: A recursive method calls itself.
+        //adv: easier to read/write, easier to debug
+        //disad: sometimes slower, uses more memory
 
-        //complexity: O(n^2)
-        //small data set: decent
-        //big data set: bad
+        //walk(5);
+        recursiveWalk(5);
+    }
 
-        //Best case O(n)
+    private static void recursiveWalk(int steps) {
+        if (steps < 1) return; //base case: stop
+        System.out.println("You take a step!");
+        walk(steps - 1);
+    }
 
-        int array[] = {8, 7, 9, 2, 3, 1, 5, 4, 6};
-
-        insertionSort(array);
-
-        for (int i : array) {
-            System.out.print(i + " ");
+    private static void walk(int steps) {
+        for (int i = 0; i < steps; i++) {
+            System.out.println("You take a step!");
         }
     }
 
-    private static void insertionSort(int[] array) {
-        for (int i = 1; i < array.length; i++) {
-            int temp = array[i];
-            int j = i - 1;
-
-            while (j >= 0 && array[j] < temp) {
-                array[j + 1] = array[j];
-                j--;
-            }
-            array[j + 1] = temp;
-        }
-    }
 }
