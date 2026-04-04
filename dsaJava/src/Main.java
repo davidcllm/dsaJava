@@ -6,20 +6,12 @@ public class Main {
         //adv: easier to read/write, easier to debug
         //disad: sometimes slower, uses more memory
 
-        //walk(5);
-        recursiveWalk(5);
-    }
 
-    private static void recursiveWalk(int steps) {
-        if (steps < 1) return; //base case: stop
-        System.out.println("You take a step!");
-        walk(steps - 1);
+        System.out.println(factorial(7));
     }
-
-    private static void walk(int steps) {
-        for (int i = 0; i < steps; i++) {
-            System.out.println("You take a step!");
-        }
+    private static int factorial(int num) {
+        if(num < 1) return 1;
+        return num * factorial(num - 1);
     }
 
 }
