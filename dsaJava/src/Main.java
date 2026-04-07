@@ -2,15 +2,16 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //merge sort
-        //Complexity:
+        //merge sort: recursively divide array in 2, sort, re-combine
+        //run-time complexity: O(n log n)
+        //space compleity: O(n)
 
         int[] array = {8, 2, 5, 3, 4, 7, 6, 1};
 
         mergeSort(array);
 
         for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i] + " ");
+            System.out.print(array[i] + " ");
         }
     }
 
@@ -30,7 +31,7 @@ public class Main {
                 leftArray[i] = array[i];
             }
             else {
-                rightArray[i] = array[i];
+                rightArray[j] = array[i];
                 j++;
             }
         }
@@ -42,7 +43,33 @@ public class Main {
     }
 
     private static void merge(int[] leftArray, int[] rightArray, int[] array) {
+        int leftSize = array.length / 2;
+        int rightSize = array.length - leftSize;
+        int i = 0, l = 0, r = 0; //indices
 
+        //check the conditions for merging
+        while (l < leftSize && r < rightSize) {
+            if (leftArray[l] < rightArray[r]) {
+                array[i] = leftArray[l];
+                i++;
+                l++;
+            }
+            else {
+                array[i] = rightArray[r];
+                i++;
+                r++;
+            }
+        }
+        while (l < leftSize) {
+            array[i] = leftArray[l];
+            i++;
+            l++;
+        }
+        while (r < rightSize) {
+            array[i] = rightArray[r];
+            i++;
+            r++;
+        }
     }
 
 
