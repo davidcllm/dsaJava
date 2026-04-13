@@ -2,7 +2,14 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //quick sort
+        //quick sort: moves smaller elements to the left of a pivot.
+        //            recrsively divide array in 2 partitions.
+        //run-time complexity:
+        //Best case -> O(n log(n))
+        //Average case -> O(n log(n))
+        //Worst case -> O(n^2) if already sorted
+
+        //space complexity: O(log(n))
 
         int[] array = {8, 2, 5, 3, 4, 7, 6, 1};
 
