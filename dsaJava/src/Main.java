@@ -2,49 +2,20 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //quick sort: moves smaller elements to the left of a pivot.
-        //            recrsively divide array in 2 partitions.
-        //run-time complexity:
-        //Best case -> O(n log(n))
-        //Average case -> O(n log(n))
-        //Worst case -> O(n^2) if already sorted
+        Hashtable<Integer, String> table = new Hashtable<>(10);
 
-        //space complexity: O(log(n))
+        table.put(100, "Spongebob");
+        table.put(123, "Patrick");
+        table.put(321, "Sandy");
+        table.put(555, "Squidward");
+        table.put(777, "Gary");
 
-        int[] array = {8, 2, 5, 3, 4, 7, 6, 1};
+        //table.remove(777);
 
-        quickSort(array, 0, array.length - 1);
+        System.out.println(table.get(100));
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+        for (Integer key : table.keySet()) {
+            System.out.println(key.hashCode() % 10 + "\t" + key + "\t" + table.get(key));
         }
     }
-
-    private static void quickSort(int[] array, int start, int end) {
-        if (end <= start) return;
-        int pivot = partition(array, start, end);
-        quickSort(array, start, pivot - 1);
-        quickSort(array, pivot + 1, end);
-    }
-    private static int partition(int[] array, int start, int end) {
-        int pivot = array[end];
-        int i = start - 1;
-
-        for (int j = start; j <= end - 1; j++) {
-            if (array[j] < pivot) {
-                i++;
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-            }
-        }
-        i++;
-        int temp = array[i];
-        array[i] = array[end];
-        array[end] = temp;
-
-        return i;
-
-    }
-
 }
