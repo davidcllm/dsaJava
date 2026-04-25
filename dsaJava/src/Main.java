@@ -22,6 +22,12 @@ public class Main {
 
         graph.print();
 
+        //check edge between A and B
+        System.out.println(graph.checkEdge(0,1));
+
+        //check edge between D and C
+        System.out.println(graph.checkEdge(3,2));
+
     }
 }
 
