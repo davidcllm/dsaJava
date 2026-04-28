@@ -2,31 +2,11 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //Adjacency matrix: An array to store 1's/0's to represent edges 
-        //runtime complexity to check an edge: O(1)
-        //space complexity: O(v^2)
+        //Adjacency list: An array/arraylist of linkedlists. Each linkedl has a unique node at the head.
+        //All adjacent neighboors to that node are added to that node's linkedlisst.
 
-        Graph graph = new Graph(5);
-        graph.addNode(new Node('A'));
-        graph.addNode(new Node('B'));
-        graph.addNode(new Node('C'));
-        graph.addNode(new Node('D'));
-        graph.addNode(new Node('E'));
-
-        graph.addEdge(0, 1);
-        graph.addEdge(1, 2);
-        graph.addEdge(2, 3);
-        graph.addEdge(2, 4);
-        graph.addEdge(4, 0);
-        graph.addEdge(4, 2);
-
-        graph.print();
-
-        //check edge between A and B
-        System.out.println(graph.checkEdge(0,1));
-
-        //check edge between D and C
-        System.out.println(graph.checkEdge(3,2));
+        //runtime complexity to check an edge: O(v)
+        //space complexity: O(v+e)
 
     }
 }
