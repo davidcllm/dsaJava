@@ -9,11 +9,15 @@ public class Graph {
     }
 
     public void addNode(Node node) {
-
+        LinkedList<Node> currentList = new LinkedList<>();
+        currentList.add(node);
+        alist.add(currentList);
     }
 
     public void addEdge(int src, int dst) {
-
+        LinkedList<Node> currentList = alist.get(src);
+        Node dstNode = alist.get(dst).get(0); //head of linkedlist
+        currentList.add(dstNode);
     }
 
     public void checkEdge(int src, int dst) {
