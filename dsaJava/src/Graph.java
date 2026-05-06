@@ -33,6 +33,11 @@ public class Graph {
     }
 
     public void print() {
-
+        for (LinkedList<Node> currentList : alist) {
+            for (Node node : currentList) {
+                System.out.print(node.data + " -> ");
+            }
+            System.out.println();
+        }
     }
 }
