@@ -40,4 +40,12 @@ public class Graph {
             System.out.println();
         }
     }
+
+    public void depthFirstSearch(int src) {
+        boolean[] visited = new boolean[matrix.length];
+        dFSHelper(src, visited);
+    }
+
+    private void dFSHelper(int src, boolean[] visited) {
+    }
 }
