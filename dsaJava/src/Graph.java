@@ -47,5 +47,19 @@ public class Graph {
     }
 
     private void dFSHelper(int src, boolean[] visited) {
+        if(visited[src]) {
+            return;
+        }
+        else {
+            visited[src] = true;
+            System.out.println(nodes.get(src).data + " = visited");
+        }
+
+        for(int i = 0; i < matrix[src].length; i++) {
+            if(matrix[src][i] == 1){
+                dFSHelper(i, visited);
+            }
+        }
+        return;
     }
 }
