@@ -21,5 +21,12 @@ public class Main {
         graph.addEdge(4, 2);
 
         graph.print();
+        System.out.println();
+
+        //graph.depthFirstSearch(0); //A
+        //graph.depthFirstSearch(1); //B
+        //graph.depthFirstSearch(2); //C
+        //graph.depthFirstSearch(3); //D
+        graph.depthFirstSearch(4); //E
     }
 }
