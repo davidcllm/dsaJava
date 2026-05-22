@@ -2,9 +2,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //Depth First Search = Pick a route, keep going.
-        //If you reach a dead end, or an already visited node,
-        //backtrack to a previous node with unvisited adjacent neighbors.
+        //Breadth First Search: traverse a graph level by level
 
         Graph graph = new Graph(5);
         graph.addNode(new Node('A'));
@@ -23,10 +21,10 @@ public class Main {
         graph.print();
         System.out.println();
 
-        //graph.depthFirstSearch(0); //A
-        //graph.depthFirstSearch(1); //B
-        //graph.depthFirstSearch(2); //C
-        //graph.depthFirstSearch(3); //D
-        graph.depthFirstSearch(4); //E
+        //graph.breadthFirstSearch(0);
+        //graph.breadthFirstSearch(1);
+        //graph.breadthFirstSearch(2);
+        graph.breadthFirstSearch(3);
+        //graph.breadthFirstSearch(4);
     }
 }
