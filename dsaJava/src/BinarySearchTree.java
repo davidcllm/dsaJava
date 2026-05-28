@@ -28,9 +28,9 @@ public class BinarySearchTree {
 
     private void displayHelper(Node root) {
         if(root != null) {
-            displayHelper(root.left);
-            System.out.println(root.data);
             displayHelper(root.right);
+            System.out.println(root.data);
+            displayHelper(root.left);
         }
     }
 
