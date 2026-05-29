@@ -28,18 +28,29 @@ public class BinarySearchTree {
 
     private void displayHelper(Node root) {
         if(root != null) {
-            displayHelper(root.right);
-            System.out.println(root.data);
             displayHelper(root.left);
+            System.out.println(root.data);
+            displayHelper(root.right);
         }
     }
 
     public boolean search(int data) {
-        return false;
+        return searchHelper(root, data);
     }
 
     private boolean searchHelper(Node root, int data) {
-        return false;
+        if(root == null) {
+            return false;
+        }
+        else if(root.data == data) {
+            return true;
+        }
+        else if(root.data > data) {
+            return searchHelper(root.left, data);
+        }
+        else {
+            return searchHelper(root.right, data);
+        }
     }
 
     public void remove(int data) {
