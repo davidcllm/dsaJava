@@ -19,5 +19,7 @@ public class Main {
         tree.display();
 
         System.out.println(tree.search(1));
+
+        tree.remove(0);
     }
 }

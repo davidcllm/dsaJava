@@ -54,7 +54,12 @@ public class BinarySearchTree {
     }
 
     public void remove(int data) {
-
+        if(search(data)) {
+            removeHelper(root, data);
+        }
+        else {
+            System.out.println(data + " could not be found");
+        }
     }
 
     public Node removeHelper(Node root, int data) {
