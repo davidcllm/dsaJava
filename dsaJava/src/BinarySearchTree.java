@@ -63,7 +63,27 @@ public class BinarySearchTree {
     }
 
     public Node removeHelper(Node root, int data) {
-        return null;
+        if (root == null) {
+            return root;
+        } else if (data < root.data) {
+            root.left = removeHelper(root.left, data);
+        } else if (data > root.data) {
+            root.right = removeHelper(root.right, data);
+        }
+        else { //node found
+            if(root.left == null && root.left == null) { //leaf node
+                root = null;
+            }
+            else if(root.right != null) { //find successor to replace this node
+                root.data = successor(root);
+                root.right = removeHelper(root.right, root.data);
+            }
+            else { //find predecessor to replace this node
+                root.data = predecesssor(root);
+                root.left = removeHelper(root.left, root.data);
+            }
+        }
+        return root;
     }
 
     private int successor(Node root) {
